@@ -1,0 +1,448 @@
+/* Algemene Styling */
+body, h1, h2, p, ul, li, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 80px;
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigatiebalk */
+header {
+    background-color: #0044cc;
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+    position: relative;
+}
+
+header .logo {
+    height: 50px;
+    margin-left: 20px;
+    vertical-align: middle;
+    animation: logoBounce 2s infinite;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #f7e300;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    transform: scale(1.1);
+    letter-spacing: 2px;
+}
+
+/* Homepagina Styling */
+.home-content {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, rgba(0, 68, 204, 0.1), rgba(0, 68, 204, 0.3)), url('your-background-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+}
+
+.home-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 68, 204, 0.4);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.home-content h1 {
+    font-size: 4em;
+    color: #fff;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.home-content p {
+    font-size: 1.5em;
+    color: #ddd;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.5s;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.home-content a.button-link {
+    display: inline-block;
+    background-color: #f7e300;
+    color: #0033aa;
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    z-index: 1;
+}
+
+.home-content a.button-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+.home-content a.button-link:hover::before {
+    transform: scaleX(1);
+}
+
+.home-content a.button-link:hover {
+    background-color: #ffd700;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.home-content a.button-link span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Extra Secties Styling */
+.features {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    color: #0033aa;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.features p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease-out 0.5s;
+}
+
+.feature-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-item {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    color: #0033aa;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    color: #666;
+}
+
+/* Contactpagina Styling */
+.contact-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 68, 204, 0.1);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.contact-content:hover::before {
+    opacity: 1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    animation: fadeInUp 1s ease-out;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #0044cc;
+    box-shadow: 0 0 8px rgba(0, 68, 204, 0.2);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #f7e300;
+    color: #0033aa;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.4s ease;
+    z-index: 0;
+}
+
+button:hover::before {
+    transform: scaleX(1);
+}
+
+button:hover {
+    background-color: #ffd700;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0033aa;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animaties */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes logoBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .home-content {
+        padding: 50px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 2.5em;
+    }
+
+    .home-content p {
+        font-size: 1.2em;
+    }
+
+    .home-content a.button-link {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+
+    .features {
+        padding: 30px 20px;
+    }
+
+    .features h2 {
+        font-size: 2em;
+    }
+
+    .features p {
+        font-size: 1em;
+    }
+
+    .feature-item {
+        width: 80%;
+    }
+
+    .contact-content {
+        padding: 20px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
